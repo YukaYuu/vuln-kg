@@ -1,0 +1,1910 @@
+{
+ "nodes": {
+  "CVE-2017-16877": {
+   "type": "CVE",
+   "label": "CVE-2017-16877",
+   "desc": "ZEIT Next.js before 2.4.1 has directory traversal under the /_next and /static request namespace, allowing attackers to obtain sensitive information.",
+   "severity": "HIGH",
+   "score": 7.5
+  },
+  "CWE-22": {
+   "type": "CWE",
+   "label": "CWE-22"
+  },
+  "zeit:next.js": {
+   "type": "Product",
+   "label": "zeit:next.js"
+  },
+  "CVE-2018-6184": {
+   "type": "CVE",
+   "label": "CVE-2018-6184",
+   "desc": "ZEIT Next.js 4 before 4.2.3 has Directory Traversal under the /_next request namespace.",
+   "severity": "HIGH",
+   "score": 7.5
+  },
+  "CVE-2018-18282": {
+   "type": "CVE",
+   "label": "CVE-2018-18282",
+   "desc": "Next.js 7.0.0 and 7.0.1 has XSS via the 404 or 500 /_error page.",
+   "severity": "MEDIUM",
+   "score": 6.1
+  },
+  "CWE-79": {
+   "type": "CWE",
+   "label": "CWE-79"
+  },
+  "CVE-2020-5284": {
+   "type": "CVE",
+   "label": "CVE-2020-5284",
+   "desc": "Next.js versions before 9.3.2 have a directory traversal vulnerability. Attackers could craft special requests to access files in the dist directory (.next). This does not affect files outside of the dist directory (.next). In general, the dist directory only holds build assets unless your application intentionally stores other assets under this directory. This issue is fixed in version 9.3.2.",
+   "severity": "MEDIUM",
+   "score": 4.4
+  },
+  "CWE-23": {
+   "type": "CWE",
+   "label": "CWE-23"
+  },
+  "CVE-2020-15242": {
+   "type": "CVE",
+   "label": "CVE-2020-15242",
+   "desc": "Next.js versions >=9.5.0 and <9.5.4 are vulnerable to an Open Redirect. Specially encoded paths could be used with the trailing slash redirect to allow an open redirect to occur to an external site. In general, this redirect does not directly harm users although can allow for phishing attacks by redirecting to an attackers domain from a trusted domain. The issue is fixed in version 9.5.4.",
+   "severity": "MEDIUM",
+   "score": 4.7
+  },
+  "CWE-601": {
+   "type": "CWE",
+   "label": "CWE-601"
+  },
+  "vercel:next.js": {
+   "type": "Product",
+   "label": "vercel:next.js"
+  },
+  "CVE-2021-21310": {
+   "type": "CVE",
+   "label": "CVE-2021-21310",
+   "desc": "NextAuth.js (next-auth) is am open source authentication solution for Next.js applications. In next-auth before version 3.3.0 there is a token verification vulnerability. Implementations using the Prisma database adapter in conjunction with the Email provider are impacted. Implementations using the Email provider with the default database adapter are not impacted. Implementations using the Prisma database adapter but not using the Email provider are not impacted. The Prisma database adapter was checking the verification token, but was not verifying the email address associated with that token. This made it possible to use a valid token to sign in as another user when using the Prima adapter in conjunction with the Email provider. This issue is specific to the community supported Prisma adapter. This issue is fixed in version 3.3.0.",
+   "severity": "MEDIUM",
+   "score": 6.1
+  },
+  "CWE-290": {
+   "type": "CWE",
+   "label": "CWE-290"
+  },
+  "nextauth.js:next-auth": {
+   "type": "Product",
+   "label": "nextauth.js:next-auth"
+  },
+  "CVE-2021-32702": {
+   "type": "CVE",
+   "label": "CVE-2021-32702",
+   "desc": "The Auth0 Next.js SDK is a library for implementing user authentication in Next.js applications. Versions before and including `1.4.1` are vulnerable to reflected XSS. An attacker can execute arbitrary code by providing an XSS payload in the `error` query parameter which is then processed by the callback handler as an error message. You are affected by this vulnerability if you are using `@auth0/nextjs-auth0` version `1.4.1` or lower **unless** you are using custom error handling that does not return the error message in an HTML response. Upgrade to version `1.4.1` to resolve. The fix adds basic HTML escaping to the error message and it should not impact your users.",
+   "severity": "HIGH",
+   "score": 8.0
+  },
+  "auth0:nextjs-auth0": {
+   "type": "Product",
+   "label": "auth0:nextjs-auth0"
+  },
+  "CVE-2021-37699": {
+   "type": "CVE",
+   "label": "CVE-2021-37699",
+   "desc": "Next.js is an open source website development framework to be used with the React library. In affected versions specially encoded paths could be used when pages/_error.js was statically generated allowing an open redirect to occur to an external site. In general, this redirect does not directly harm users although can allow for phishing attacks by redirecting to an attacker's domain from a trusted domain. We recommend everyone to upgrade regardless of whether you can reproduce the issue or not. The issue has been patched in release 11.1.0.",
+   "severity": "MEDIUM",
+   "score": 6.9
+  },
+  "CVE-2021-39178": {
+   "type": "CVE",
+   "label": "CVE-2021-39178",
+   "desc": "Next.js is a React framework. Versions of Next.js between 10.0.0 and 11.0.0 contain a cross-site scripting vulnerability. In order for an instance to be affected by the vulnerability, the `next.config.js` file must have `images.domains` array assigned and the image host assigned in `images.domains` must allow user-provided SVG. If the `next.config.js` file has `images.loader` assigned to something other than default or the instance is deployed on Vercel, the instance is not affected by the vulnerability. The vulnerability is patched in Next.js version 11.1.1.",
+   "severity": "HIGH",
+   "score": 7.5
+  },
+  "CVE-2021-43803": {
+   "type": "CVE",
+   "label": "CVE-2021-43803",
+   "desc": "Next.js is a React framework. In versions of Next.js prior to 12.0.5 or 11.1.3, invalid or malformed URLs could lead to a server crash. In order to be affected by this issue, the deployment must use Next.js versions above 11.1.0 and below 12.0.5, Node.js above 15.0.0, and next start or a custom server. Deployments on Vercel are not affected, along with similar environments where invalid requests are filtered before reaching Next.js. Versions 12.0.5 and 11.1.3 contain patches for this issue.",
+   "severity": "HIGH",
+   "score": 7.5
+  },
+  "CWE-20": {
+   "type": "CWE",
+   "label": "CWE-20"
+  },
+  "nodejs:node.js": {
+   "type": "Product",
+   "label": "nodejs:node.js"
+  },
+  "CVE-2021-43812": {
+   "type": "CVE",
+   "label": "CVE-2021-43812",
+   "desc": "The Auth0 Next.js SDK is a library for implementing user authentication in Next.js applications. Versions before 1.6.2 do not filter out certain returnTo parameter values from the login url, which expose the application to an open redirect vulnerability. Users are advised to upgrade as soon as possible. There are no known workarounds for this issue.",
+   "severity": "MEDIUM",
+   "score": 6.4
+  },
+  "CVE-2022-21721": {
+   "type": "CVE",
+   "label": "CVE-2022-21721",
+   "desc": "Next.js is a React framework. Starting with version 12.0.0 and prior to version 12.0.9, vulnerable code could allow a bad actor to trigger a denial of service attack for anyone using i18n functionality. In order to be affected by this CVE, one must use next start or a custom server and the built-in i18n support. Deployments on Vercel, along with similar environments where invalid requests are filtered before reaching Next.js, are not affected. A patch has been released, `next@12.0.9`, that mitigates this issue. As a workaround, one may ensure `/${locale}/_next/` is blocked from reaching the Next.js instance until it becomes feasible to upgrade.",
+   "severity": "MEDIUM",
+   "score": 5.9
+  },
+  "CVE-2022-23646": {
+   "type": "CVE",
+   "label": "CVE-2022-23646",
+   "desc": "Next.js is a React framework. Starting with version 10.0.0 and prior to version 12.1.0, Next.js is vulnerable to User Interface (UI) Misrepresentation of Critical Information. In order to be affected, the `next.config.js` file must have an `images.domains` array assigned and the image host assigned in `images.domains` must allow user-provided SVG. If the `next.config.js` file has `images.loader` assigned to something other than default, the instance is not affected. Version 12.1.0 contains a patch for this issue. As a workaround, change `next.config.js` to use a different `loader configuration` other than the default.",
+   "severity": "MEDIUM",
+   "score": 5.9
+  },
+  "CWE-451": {
+   "type": "CWE",
+   "label": "CWE-451"
+  },
+  "CVE-2022-29214": {
+   "type": "CVE",
+   "label": "CVE-2022-29214",
+   "desc": "NextAuth.js (next-auth) is am open source authentication solution for Next.js applications. Prior to versions 3.29.3 and 4.3.3, an open redirect vulnerability is present when the developer is implementing an OAuth 1 provider. Versions 3.29.3 and 4.3.3 contain a patch for this issue. The maintainers recommend adding a certain configuration to one's `callbacks` option as a workaround for those unable to upgrade.",
+   "severity": "MEDIUM",
+   "score": 6.1
+  },
+  "CVE-2022-31093": {
+   "type": "CVE",
+   "label": "CVE-2022-31093",
+   "desc": "NextAuth.js is a complete open source authentication solution for Next.js applications. In affected versions an attacker can send a request to an app using NextAuth.js with an invalid `callbackUrl` query parameter, which internally is converted to a `URL` object. The URL instantiation would fail due to a malformed URL being passed into the constructor, causing it to throw an unhandled error which led to the **API route handler timing out and logging in to fail**. This has been remedied in versions 3.29.5 and 4.5.0. If for some reason you cannot upgrade, the workaround requires you to rely on Advanced Initialization. Please see the documentation for more.",
+   "severity": "HIGH",
+   "score": 7.5
+  },
+  "CWE-754": {
+   "type": "CWE",
+   "label": "CWE-754"
+  },
+  "CVE-2022-31127": {
+   "type": "CVE",
+   "label": "CVE-2022-31127",
+   "desc": "NextAuth.js is a complete open source authentication solution for Next.js applications. An attacker can pass a compromised input to the e-mail [signin endpoint](https://next-auth.js.org/getting-started/rest-api#post-apiauthsigninprovider) that contains some malicious HTML, tricking the e-mail server to send it to the user, so they can perform a phishing attack. Eg.: `balazs@email.com, <a href=\"http://attacker.com\">Before signing in, claim your money!</a>`. This was previously sent to `balazs@email.com`, and the content of the email containing a link to the attacker's site was rendered in the HTML. This has been remedied in the following releases, by simply not rendering that e-mail in the HTML, since it should be obvious to the receiver what e-mail they used: next-auth v3 users before version 3.29.8 are impacted. (We recommend upgrading to v4, as v3 is considered unmaintained. next-auth v4 users before version 4.9.0 are impacted. If for some reason you cannot upgrade, the workaround requires you to sanitize the `email` parameter that is passed to `sendVerificationRequest` and rendered in the HTML. If you haven't created a custom `sendVerificationRequest`, you only need to upgrade. Otherwise, make sure to either exclude `email` from the HTML body or efficiently sanitize it.",
+   "severity": "HIGH",
+   "score": 7.1
+  },
+  "CVE-2022-31186": {
+   "type": "CVE",
+   "label": "CVE-2022-31186",
+   "desc": "NextAuth.js is a complete open source authentication solution for Next.js applications. An information disclosure vulnerability in `next-auth` before `v4.10.2` and `v3.29.9` allows an attacker with log access privilege to obtain excessive information such as an identity provider's secret in the log (which is thrown during OAuth error handling) and use it to leverage further attacks on the system, like impersonating the client to ask for extensive permissions. This issue has been patched in `v4.10.2` and `v3.29.9` by moving the log for `provider` information to the debug level. In addition, we added a warning for having the `debug: true` option turned on in production. If for some reason you cannot upgrade, you can user the `logger` configuration option by sanitizing the logs.",
+   "severity": "LOW",
+   "score": 3.3
+  },
+  "CWE-532": {
+   "type": "CWE",
+   "label": "CWE-532"
+  },
+  "next-auth:nextauth.js": {
+   "type": "Product",
+   "label": "next-auth:nextauth.js"
+  },
+  "CVE-2022-35924": {
+   "type": "CVE",
+   "label": "CVE-2022-35924",
+   "desc": "NextAuth.js is a complete open source authentication solution for Next.js applications. `next-auth` users who are using the `EmailProvider` either in versions before `4.10.3` or `3.29.10` are affected. If an attacker could forge a request that sent a comma-separated list of emails (eg.: `attacker@attacker.com,victim@victim.com`) to the sign-in endpoint, NextAuth.js would send emails to both the attacker and the victim's e-mail addresses. The attacker could then login as a newly created user with the email being `attacker@attacker.com,victim@victim.com`. This means that basic authorization like `email.endsWith(\"@victim.com\")` in the `signIn` callback would fail to communicate a threat to the developer and would let the attacker bypass authorization, even with an `@attacker.com` address. This vulnerability has been patched in `v4.10.3` and `v3.29.10` by normalizing the email value that is sent to the sign-in endpoint before accessing it anywhere else. We also added a `normalizeIdentifier` callback on the `EmailProvider` configuration, where you can further tweak your requirements for what your system considers a valid e-mail address. (E.g.: strict RFC2821 compliance). Users are advised to upgrade. There are no known workarounds for this vulnerability. If for some reason you cannot upgrade, you can normalize the incoming request using Advanced Initialization.",
+   "severity": "CRITICAL",
+   "score": 9.1
+  },
+  "CWE-863": {
+   "type": "CWE",
+   "label": "CWE-863"
+  },
+  "CVE-2022-36046": {
+   "type": "CVE",
+   "label": "CVE-2022-36046",
+   "desc": "Next.js is a React framework that can provide building blocks to create web applications. All of the following must be true to be affected by this CVE: Next.js version 12.2.3, Node.js version above v15.0.0 being used with strict `unhandledRejection` exiting AND using next start or a [custom server](https://nextjs.org/docs/advanced-features/custom-server). Deployments on Vercel ([vercel.com](https://vercel.com/)) are not affected along with similar environments where `next-server` isn't being shared across requests.",
+   "severity": "MEDIUM",
+   "score": 5.3
+  },
+  "CWE-248": {
+   "type": "CWE",
+   "label": "CWE-248"
+  },
+  "CVE-2022-39263": {
+   "type": "CVE",
+   "label": "CVE-2022-39263",
+   "desc": "`@next-auth/upstash-redis-adapter` is the Upstash Redis adapter for NextAuth.js, which provides authentication for Next.js. Applications that use `next-auth` Email Provider and `@next-auth/upstash-redis-adapter` before v3.0.2 are affected by this vulnerability. The Upstash Redis adapter implementation did not check for both the identifier (email) and the token, but only checking for the identifier when verifying the token in the email callback flow. An attacker who knows about the victim's email could easily sign in as the victim, given the attacker also knows about the verification token's expired duration. The vulnerability is patched in v3.0.2. A workaround is available. Using Advanced Initialization, developers can check the requests and compare the query's token and identifier before proceeding.",
+   "severity": "MEDIUM",
+   "score": 6.8
+  },
+  "CWE-287": {
+   "type": "CWE",
+   "label": "CWE-287"
+  },
+  "CVE-2023-27490": {
+   "type": "CVE",
+   "label": "CVE-2023-27490",
+   "desc": "NextAuth.js is an open source authentication solution for Next.js applications. `next-auth` applications using OAuth provider versions before `v4.20.1` have been found to be subject to an authentication vulnerability. A bad actor who can read traffic on the victim's network or who is able to social engineer the victim to click a manipulated login link could intercept and tamper with the authorization URL to **log in as the victim**, bypassing the CSRF protection. This is due to a partial failure during a compromised OAuth session where a session code is erroneously generated. This issue has been addressed in version 4.20.1. Users are advised to upgrade. Users unable to upgrade may using Advanced Initialization, manually check the callback request for state, pkce, and nonce against the provider configuration to prevent this issue. See the linked GHSA for details.",
+   "severity": "HIGH",
+   "score": 8.1
+  },
+  "CWE-352": {
+   "type": "CWE",
+   "label": "CWE-352"
+  },
+  "CWE-384": {
+   "type": "CWE",
+   "label": "CWE-384"
+  },
+  "CVE-2023-46298": {
+   "type": "CVE",
+   "label": "CVE-2023-46298",
+   "desc": "Next.js before 13.4.20-canary.13 lacks a cache-control header and thus empty prefetch responses may sometimes be cached by a CDN, causing a denial of service to all users requesting the same URL via that CDN.",
+   "severity": "HIGH",
+   "score": 7.5
+  },
+  "CVE-2023-46729": {
+   "type": "CVE",
+   "label": "CVE-2023-46729",
+   "desc": "sentry-javascript provides Sentry SDKs for JavaScript. An unsanitized input of Next.js SDK tunnel endpoint allows sending HTTP requests to arbitrary URLs and reflecting the response back to the user. This issue only affects users who have Next.js SDK tunneling feature enabled. The problem has been fixed in version 7.77.0.",
+   "severity": "CRITICAL",
+   "score": 9.3
+  },
+  "CWE-918": {
+   "type": "CWE",
+   "label": "CWE-918"
+  },
+  "sentry:sentry_software_development_kit": {
+   "type": "Product",
+   "label": "sentry:sentry_software_development_kit"
+  },
+  "CVE-2023-48309": {
+   "type": "CVE",
+   "label": "CVE-2023-48309",
+   "desc": "NextAuth.js provides authentication for Next.js. `next-auth` applications prior to version 4.24.5 that rely on the default Middleware authorization are affected by a vulnerability. A bad actor could create an empty/mock user, by getting hold of a NextAuth.js-issued JWT from an interrupted OAuth sign-in flow (state, PKCE or nonce). Manually overriding the `next-auth.session-token` cookie value with this non-related JWT would let the user simulate a logged in user, albeit having no user information associated with it. (The only property on this user is an opaque randomly generated string). This vulnerability does not give access to other users' data, neither to resources that require proper authorization via scopes or other means. The created mock user has no information associated with it (ie. no name, email, access_token, etc.) This vulnerability can be exploited by bad actors to peek at logged in user states (e.g. dashboard layout). `next-auth` `v4.24.5` contains a patch for the vulnerability. As a workaround, using a custom authorization callback for Middleware, developers can manually do a basic authentication.",
+   "severity": "MEDIUM",
+   "score": 5.3
+  },
+  "CWE-285": {
+   "type": "CWE",
+   "label": "CWE-285"
+  },
+  "CVE-2024-23841": {
+   "type": "CVE",
+   "label": "CVE-2024-23841",
+   "desc": "apollo-client-nextjs is the Apollo Client support for the Next.js App Router. The @apollo/experimental-apollo-client-nextjs NPM package is vulnerable to a cross-site scripting vulnerability. To exploit this vulnerability, an attacker would need to either inject malicious input (e.g. by redirecting a user to a specifically-crafted link) or arrange to have malicious input be returned by a GraphQL server (e.g. by persisting it in a database). To fix this issue, please update to version 0.7.0 or later.",
+   "severity": "HIGH",
+   "score": 8.2
+  },
+  "CWE-80": {
+   "type": "CWE",
+   "label": "CWE-80"
+  },
+  "apollographql:apollo_client": {
+   "type": "Product",
+   "label": "apollographql:apollo_client"
+  },
+  "CVE-2024-29901": {
+   "type": "CVE",
+   "label": "CVE-2024-29901",
+   "desc": "The AuthKit library for Next.js provides helpers for authentication and session management using WorkOS & AuthKit with Next.js.\nA user can reuse an expired session by controlling the `x-workos-session` header. The vulnerability is patched in v0.4.2.",
+   "severity": "MEDIUM",
+   "score": 4.8
+  },
+  "CWE-294": {
+   "type": "CWE",
+   "label": "CWE-294"
+  },
+  "workos:authkit-nextjs": {
+   "type": "Product",
+   "label": "workos:authkit-nextjs"
+  },
+  "CVE-2024-34350": {
+   "type": "CVE",
+   "label": "CVE-2024-34350",
+   "desc": "Next.js is a React framework that can provide building blocks to create web applications. Prior to 13.5.1, an inconsistent interpretation of a crafted HTTP request meant that requests are treated as both a single request, and two separate requests by Next.js, leading to desynchronized responses. This led to a response queue poisoning vulnerability in the affected Next.js versions. For a request to be exploitable, the affected route also had to be making use of the [rewrites](https://nextjs.org/docs/app/api-reference/next-config-js/rewrites) feature in Next.js. The vulnerability is resolved in Next.js `13.5.1` and newer.",
+   "severity": "HIGH",
+   "score": 7.5
+  },
+  "CWE-444": {
+   "type": "CWE",
+   "label": "CWE-444"
+  },
+  "CVE-2024-34351": {
+   "type": "CVE",
+   "label": "CVE-2024-34351",
+   "desc": "Next.js is a React framework that can provide building blocks to create web applications. A Server-Side Request Forgery (SSRF) vulnerability was identified in Next.js Server Actions. If the `Host` header is modified, and the below conditions are also met, an attacker may be able to make requests that appear to be originating from the Next.js application server itself. The required conditions are 1) Next.js is running in a self-hosted manner; 2) the Next.js application makes use of Server Actions; and 3) the Server Action performs a redirect to a relative path which starts with a `/`. This vulnerability was fixed in Next.js `14.1.1`.",
+   "severity": "HIGH",
+   "score": 7.5
+  },
+  "CVE-2024-37162": {
+   "type": "CVE",
+   "label": "CVE-2024-37162",
+   "desc": "zsa is a library for building typesafe server actions in Next.js. All users are impacted. The zsa application transfers the parse error stack from the server to the client in production build mode. This can potentially reveal sensitive information about the server environment, such as the machine username and directory paths. An attacker could exploit this vulnerability to gain unauthorized access to sensitive server information. This information could be used to plan further attacks or gain a deeper understanding of the server infrastructure. This has been patched on `0.3.3`.",
+   "severity": "MEDIUM",
+   "score": 4.0
+  },
+  "CWE-209": {
+   "type": "CWE",
+   "label": "CWE-209"
+  },
+  "idopesok:zsa": {
+   "type": "Product",
+   "label": "idopesok:zsa"
+  },
+  "CVE-2024-39693": {
+   "type": "CVE",
+   "label": "CVE-2024-39693",
+   "desc": "Next.js is a React framework. A Denial of Service (DoS) condition was identified in Next.js. Exploitation of the bug can trigger a crash, affecting the availability of the server. his vulnerability was resolved in Next.js 13.5 and later.",
+   "severity": "HIGH",
+   "score": 7.5
+  },
+  "CWE-400": {
+   "type": "CWE",
+   "label": "CWE-400"
+  },
+  "CVE-1999-0058": {
+   "type": "CVE",
+   "label": "CVE-1999-0058",
+   "desc": "Buffer overflow in PHP cgi program, php.cgi allows shell access.",
+   "severity": null,
+   "score": 7.5
+  },
+  "php:php": {
+   "type": "Product",
+   "label": "php:php"
+  },
+  "CVE-1999-0238": {
+   "type": "CVE",
+   "label": "CVE-1999-0238",
+   "desc": "php.cgi allows attackers to read any file on the system.",
+   "severity": null,
+   "score": 10.0
+  },
+  "CVE-1999-0346": {
+   "type": "CVE",
+   "label": "CVE-1999-0346",
+   "desc": "CGI PHP mlog script allows an attacker to read any file on the target server.",
+   "severity": null,
+   "score": 5.0
+  },
+  "php:php_fi": {
+   "type": "Product",
+   "label": "php:php_fi"
+  },
+  "CVE-1999-0068": {
+   "type": "CVE",
+   "label": "CVE-1999-0068",
+   "desc": "CGI PHP mylog script allows an attacker to read any file on the target server.",
+   "severity": null,
+   "score": 7.5
+  },
+  "CVE-2000-0059": {
+   "type": "CVE",
+   "label": "CVE-2000-0059",
+   "desc": "PHP3 with safe_mode enabled does not properly filter shell metacharacters from commands that are executed by popen, which could allow remote attackers to execute commands.",
+   "severity": null,
+   "score": 10.0
+  },
+  "CVE-2000-0745": {
+   "type": "CVE",
+   "label": "CVE-2000-0745",
+   "desc": "admin.php3 in PHP-Nuke does not properly verify the PHP-Nuke administrator password, which allows remote attackers to gain privileges by requesting a URL that does not specify the aid or pwd parameter.",
+   "severity": null,
+   "score": 7.5
+  },
+  "francisco_burzi:php-nuke": {
+   "type": "Product",
+   "label": "francisco_burzi:php-nuke"
+  },
+  "CVE-2000-0860": {
+   "type": "CVE",
+   "label": "CVE-2000-0860",
+   "desc": "The file upload capability in PHP versions 3 and 4 allows remote attackers to read arbitrary files by setting hidden form fields whose names match the names of internal PHP script variables.",
+   "severity": null,
+   "score": 5.0
+  },
+  "CVE-2000-0919": {
+   "type": "CVE",
+   "label": "CVE-2000-0919",
+   "desc": "Directory traversal vulnerability in PHPix Photo Album 1.0.2 and earlier allows remote attackers to read arbitrary files via a .. (dot dot) attack.",
+   "severity": null,
+   "score": 5.0
+  },
+  "phpix:phpix": {
+   "type": "Product",
+   "label": "phpix:phpix"
+  },
+  "CVE-2000-0967": {
+   "type": "CVE",
+   "label": "CVE-2000-0967",
+   "desc": "PHP 3 and 4 do not properly cleanse user-injected format strings, which allows remote attackers to execute arbitrary commands by triggering error messages that are improperly written to the error logs.",
+   "severity": null,
+   "score": 10.0
+  },
+  "CVE-2000-1230": {
+   "type": "CVE",
+   "label": "CVE-2000-1230",
+   "desc": "Backdoor in auth.php3 in Phorum 3.0.7 allows remote attackers to access restricted web pages via an HTTP request with the PHP_AUTH_USER parameter set to \"boogieman\".",
+   "severity": null,
+   "score": 5.0
+  },
+  "phorum:phorum": {
+   "type": "Product",
+   "label": "phorum:phorum"
+  },
+  "CVE-2000-1166": {
+   "type": "CVE",
+   "label": "CVE-2000-1166",
+   "desc": "Twig webmail system does not properly set the \"vhosts\" variable if it is not configured on the site, which allows remote attackers to insert arbitrary PHP (PHP3) code by specifying an alternate vhosts as an argument to the index.php3 program.",
+   "severity": null,
+   "score": 7.5
+  },
+  "twig_development_team:twig": {
+   "type": "Product",
+   "label": "twig_development_team:twig"
+  },
+  "CVE-2001-1385": {
+   "type": "CVE",
+   "label": "CVE-2001-1385",
+   "desc": "The Apache module for PHP 4.0.0 through PHP 4.0.4, when disabled with the 'engine = off' option for a virtual host, may disable PHP for other virtual hosts, which could cause Apache to serve the source code of PHP scripts.",
+   "severity": null,
+   "score": 5.0
+  },
+  "mandrakesoft:mandrake_linux": {
+   "type": "Product",
+   "label": "mandrakesoft:mandrake_linux"
+  },
+  "CVE-2001-1357": {
+   "type": "CVE",
+   "label": "CVE-2001-1357",
+   "desc": "Multiple vulnerabilities in phpMyChat before 0.14.5 exist in (1) input.php3, (2) handle_inputH.php3, or (3) index.lib.php3 with unknown consequences, possibly related to user spoofing or improperly initialized variables.",
+   "severity": null,
+   "score": 7.5
+  },
+  "phpheaven:phpmychat": {
+   "type": "Product",
+   "label": "phpheaven:phpmychat"
+  },
+  "CVE-2001-1358": {
+   "type": "CVE",
+   "label": "CVE-2001-1358",
+   "desc": "Vulnerabilities in phpMyChat before 0.14.4 allow local and possibly remote attackers to gain privileges by specifying an alternate library file in the L (localization) parameter.",
+   "severity": null,
+   "score": 7.2
+  },
+  "CVE-2001-1468": {
+   "type": "CVE",
+   "label": "CVE-2001-1468",
+   "desc": "PHP remote file inclusion vulnerability in checklogin.php in phpSecurePages 0.24 and earlier allows remote attackers to execute arbitrary PHP code by modifying the cfgProgDir parameter to reference a URL on a remote web server that contains the code.",
+   "severity": null,
+   "score": 7.5
+  },
+  "secure_reality:phpsecurepages": {
+   "type": "Product",
+   "label": "secure_reality:phpsecurepages"
+  },
+  "CVE-2001-0042": {
+   "type": "CVE",
+   "label": "CVE-2001-0042",
+   "desc": "PHP 3.x (PHP3) on Apache 1.3.6 allows remote attackers to read arbitrary files via a modified .. (dot dot) attack containing \"%5c\" (encoded backslash) sequences.",
+   "severity": null,
+   "score": 5.0
+  },
+  "apache:http_server": {
+   "type": "Product",
+   "label": "apache:http_server"
+  },
+  "CVE-2001-0043": {
+   "type": "CVE",
+   "label": "CVE-2001-0043",
+   "desc": "phpGroupWare before 0.9.7 allows remote attackers to execute arbitrary PHP commands by specifying a malicious include file in the phpgw_info parameter of the phpgw.inc.php program.",
+   "severity": null,
+   "score": 10.0
+  },
+  "phpgroupware:phpgroupware": {
+   "type": "Product",
+   "label": "phpgroupware:phpgroupware"
+  },
+  "CVE-2001-0088": {
+   "type": "CVE",
+   "label": "CVE-2001-0088",
+   "desc": "common.inc.php in phpWebLog 0.4.2 does not properly initialize the $CONF array, which inadvertently sets the password to a single character, allowing remote attackers to easily guess the SiteKey and gain administrative privileges to phpWebLog.",
+   "severity": null,
+   "score": 7.5
+  },
+  "jason_hines:phpweblog": {
+   "type": "Product",
+   "label": "jason_hines:phpweblog"
+  },
+  "CVE-2001-0108": {
+   "type": "CVE",
+   "label": "CVE-2001-0108",
+   "desc": "PHP Apache module 4.0.4 and earlier allows remote attackers to bypass .htaccess access restrictions via a malformed HTTP request on an unrestricted page that causes PHP to use those access controls on the next page that is requested.",
+   "severity": null,
+   "score": 5.0
+  },
+  "CVE-2001-0292": {
+   "type": "CVE",
+   "label": "CVE-2001-0292",
+   "desc": "PHP-Nuke 4.4.1a allows remote attackers to modify a user's email address and obtain the password by guessing the user id (UID) and calling user.php with the saveuser operator.",
+   "severity": null,
+   "score": 7.5
+  },
+  "CVE-2001-0320": {
+   "type": "CVE",
+   "label": "CVE-2001-0320",
+   "desc": "bb_smilies.php and bbcode_ref.php in PHP-Nuke 4.4 allows remote attackers to read arbitrary files and gain PHP administrator privileges by inserting a null character and .. (dot dot) sequences into a malformed username argument.",
+   "severity": null,
+   "score": 10.0
+  },
+  "CVE-2001-0321": {
+   "type": "CVE",
+   "label": "CVE-2001-0321",
+   "desc": "opendir.php script in PHP-Nuke allows remote attackers to read arbitrary files by specifying the filename as an argument to the requesturl parameter.",
+   "severity": null,
+   "score": 5.0
+  },
+  "CVE-2001-0001": {
+   "type": "CVE",
+   "label": "CVE-2001-0001",
+   "desc": "cookiedecode function in PHP-Nuke 4.4 allows users to bypass authentication and gain access to other user accounts by extracting the authentication information from a cookie.",
+   "severity": null,
+   "score": 7.5
+  },
+  "CVE-2001-0383": {
+   "type": "CVE",
+   "label": "CVE-2001-0383",
+   "desc": "banners.php in PHP-Nuke 4.4 and earlier allows remote attackers to modify banner ad URLs by directly calling the Change operation, which does not require authentication.",
+   "severity": null,
+   "score": 5.0
+  },
+  "CVE-2001-0475": {
+   "type": "CVE",
+   "label": "CVE-2001-0475",
+   "desc": "index.php in Jelsoft vBulletin does not properly initialize a PHP variable that is used to store template information, which allows remote attackers to execute arbitrary PHP code via special characters in the templatecache parameter.",
+   "severity": null,
+   "score": 7.5
+  },
+  "jelsoft:vbulletin": {
+   "type": "Product",
+   "label": "jelsoft:vbulletin"
+  },
+  "CVE-2001-0478": {
+   "type": "CVE",
+   "label": "CVE-2001-0478",
+   "desc": "Directory traversal vulnerability in phpMyAdmin 2.2.0 and earlier versions allows remote attackers to execute arbitrary code via a .. (dot dot) in an argument to the sql.php script.",
+   "severity": null,
+   "score": 7.5
+  },
+  "phpmyadmin:phpmyadmin": {
+   "type": "Product",
+   "label": "phpmyadmin:phpmyadmin"
+  },
+  "CVE-2001-0479": {
+   "type": "CVE",
+   "label": "CVE-2001-0479",
+   "desc": "Directory traversal vulnerability in phpPgAdmin 2.2.1 and earlier versions allows remote attackers to execute arbitrary code via a .. (dot dot) in an argument to the sql.php script.",
+   "severity": null,
+   "score": 7.5
+  },
+  "phppgadmin:phppgadmin": {
+   "type": "Product",
+   "label": "phppgadmin:phppgadmin"
+  },
+  "CVE-2001-1246": {
+   "type": "CVE",
+   "label": "CVE-2001-1246",
+   "desc": "PHP 4.0.5 through 4.1.0 in safe mode does not properly cleanse the 5th parameter to the mail() function, which allows local users and possibly remote attackers to execute arbitrary commands via shell metacharacters.",
+   "severity": null,
+   "score": 7.5
+  },
+  "CWE-88": {
+   "type": "CWE",
+   "label": "CWE-88"
+  },
+  "CVE-2001-1159": {
+   "type": "CVE",
+   "label": "CVE-2001-1159",
+   "desc": "load_prefs.php and supporting include files in SquirrelMail 1.0.4 and earlier do not properly initialize certain PHP variables, which allows remote attackers to (1) view sensitive files via the config_php and data_dir options, and (2) execute arbitrary code by using options_order.php to upload a message that could be interpreted as PHP.",
+   "severity": null,
+   "score": 7.5
+  },
+  "squirrelmail:squirrelmail": {
+   "type": "Product",
+   "label": "squirrelmail:squirrelmail"
+  },
+  "CVE-2001-1363": {
+   "type": "CVE",
+   "label": "CVE-2001-1363",
+   "desc": "Vulnerability in phpWebSite before 0.7.9 related to running multiple instances in the same domain, which may allow attackers to gain administrative privileges.",
+   "severity": null,
+   "score": 10.0
+  },
+  "phpwebsite_development_team:phpwebsite": {
+   "type": "Product",
+   "label": "phpwebsite_development_team:phpwebsite"
+  },
+  "CVE-2011-5037": {
+   "type": "CVE",
+   "label": "CVE-2011-5037",
+   "desc": "Google V8 computes hash values for form parameters without restricting the ability to trigger hash collisions predictably, which allows remote attackers to cause a denial of service (CPU consumption) by sending many crafted parameters, as demonstrated by attacks against Node.js.",
+   "severity": null,
+   "score": 5.0
+  },
+  "google:v8": {
+   "type": "Product",
+   "label": "google:v8"
+  },
+  "CVE-2012-2330": {
+   "type": "CVE",
+   "label": "CVE-2012-2330",
+   "desc": "The Update method in src/node_http_parser.cc in Node.js before 0.6.17 and 0.7 before 0.7.8 does not properly check the length of a string, which allows remote attackers to obtain sensitive information (request header contents) and possibly spoof HTTP headers via a zero length string.",
+   "severity": null,
+   "score": 6.4
+  },
+  "nodejs:nodejs": {
+   "type": "Product",
+   "label": "nodejs:nodejs"
+  },
+  "CVE-2013-4660": {
+   "type": "CVE",
+   "label": "CVE-2013-4660",
+   "desc": "The JS-YAML module before 2.0.5 for Node.js parses input without properly considering the unsafe !!js/function tag, which allows remote attackers to execute arbitrary code via a crafted string that triggers an eval operation.",
+   "severity": null,
+   "score": 6.8
+  },
+  "nodeca:js-yaml": {
+   "type": "Product",
+   "label": "nodeca:js-yaml"
+  },
+  "CVE-2013-4450": {
+   "type": "CVE",
+   "label": "CVE-2013-4450",
+   "desc": "The HTTP server in Node.js 0.10.x before 0.10.21 and 0.8.x before 0.8.26 allows remote attackers to cause a denial of service (memory and CPU consumption) by sending a large number of pipelined requests without reading the response.",
+   "severity": null,
+   "score": 5.0
+  },
+  "CVE-2013-7379": {
+   "type": "CVE",
+   "label": "CVE-2013-7379",
+   "desc": "The admin API in the tomato module before 0.0.6 for Node.js does not properly check the access key when it is set to a string, which allows remote attackers to bypass authentication via a string in the access-key header that partially matches config.master.api.access_key.",
+   "severity": null,
+   "score": 6.8
+  },
+  "ucdok:tomato": {
+   "type": "Product",
+   "label": "ucdok:tomato"
+  },
+  "CVE-2014-3742": {
+   "type": "CVE",
+   "label": "CVE-2014-3742",
+   "desc": "The hapi server framework 2.0.x and 2.1.x before 2.2.0 for Node.js allows remote attackers to cause a denial of service (file descriptor consumption and process crash) via unspecified vectors.",
+   "severity": null,
+   "score": 5.0
+  },
+  "CWE-399": {
+   "type": "CWE",
+   "label": "CWE-399"
+  },
+  "spumko_project:hapi_server_framework": {
+   "type": "Product",
+   "label": "spumko_project:hapi_server_framework"
+  },
+  "CVE-2014-5256": {
+   "type": "CVE",
+   "label": "CVE-2014-5256",
+   "desc": "Node.js 0.8 before 0.8.28 and 0.10 before 0.10.30 does not consider the possibility of recursive processing that triggers V8 garbage collection in conjunction with a V8 interrupt, which allows remote attackers to cause a denial of service (memory corruption and application crash) via deep JSON objects whose parsing lets this interrupt mask an overflow of the program stack.",
+   "severity": null,
+   "score": 5.0
+  },
+  "CWE-119": {
+   "type": "CWE",
+   "label": "CWE-119"
+  },
+  "CVE-2014-6394": {
+   "type": "CVE",
+   "label": "CVE-2014-6394",
+   "desc": "visionmedia send before 0.8.4 for Node.js uses a partial comparison for verifying whether a directory is within the document root, which allows remote attackers to access restricted directories, as demonstrated using \"public-restricted\" under a \"public\" directory.",
+   "severity": null,
+   "score": 7.5
+  },
+  "fedoraproject:fedora": {
+   "type": "Product",
+   "label": "fedoraproject:fedora"
+  },
+  "apple:xcode": {
+   "type": "Product",
+   "label": "apple:xcode"
+  },
+  "joyent:node.js": {
+   "type": "Product",
+   "label": "joyent:node.js"
+  },
+  "CVE-2014-7205": {
+   "type": "CVE",
+   "label": "CVE-2014-7205",
+   "desc": "Eval injection vulnerability in the internals.batch function in lib/batch.js in the bassmaster plugin before 1.5.2 for the hapi server framework for Node.js allows remote attackers to execute arbitrary Javascript code via unspecified vectors.",
+   "severity": null,
+   "score": 10.0
+  },
+  "CWE-94": {
+   "type": "CWE",
+   "label": "CWE-94"
+  },
+  "bassmaster_project:bassmaster": {
+   "type": "Product",
+   "label": "bassmaster_project:bassmaster"
+  },
+  "CVE-2014-7191": {
+   "type": "CVE",
+   "label": "CVE-2014-7191",
+   "desc": "The qs module before 1.0.0 in Node.js does not call the compact function for array data, which allows remote attackers to cause a denial of service (memory consumption) by using a large index value to create a sparse array.",
+   "severity": null,
+   "score": 5.0
+  },
+  "CVE-2014-7192": {
+   "type": "CVE",
+   "label": "CVE-2014-7192",
+   "desc": "Eval injection vulnerability in index.js in the syntax-error package before 1.1.1 for Node.js 0.10.x, as used in IBM Rational Application Developer and other products, allows remote attackers to execute arbitrary code via a crafted file.",
+   "severity": null,
+   "score": 10.0
+  },
+  "CVE-2014-7193": {
+   "type": "CVE",
+   "label": "CVE-2014-7193",
+   "desc": "The Crumb plugin before 3.0.0 for Node.js does not properly restrict token access in situations where a hapi route handler has CORS enabled, which allows remote attackers to obtain sensitive information, and potentially obtain the ability to spoof requests to non-CORS routes, via a crafted web site that is visited by an application consumer.",
+   "severity": null,
+   "score": 5.8
+  },
+  "CWE-284": {
+   "type": "CWE",
+   "label": "CWE-284"
+  },
+  "sideway:hapi_crumb": {
+   "type": "Product",
+   "label": "sideway:hapi_crumb"
+  },
+  "CVE-2015-1164": {
+   "type": "CVE",
+   "label": "CVE-2015-1164",
+   "desc": "Open redirect vulnerability in the serve-static plugin before 1.7.2 for Node.js, when mounted at the root, allows remote attackers to redirect users to arbitrary web sites and conduct phishing attacks via a // (slash slash) followed by a domain in the PATH_INFO to the default URI.",
+   "severity": null,
+   "score": 4.3
+  },
+  "serve-static_project:serve-static": {
+   "type": "Product",
+   "label": "serve-static_project:serve-static"
+  },
+  "CVE-2015-1369": {
+   "type": "CVE",
+   "label": "CVE-2015-1369",
+   "desc": "SQL injection vulnerability in Sequelize before 2.0.0-rc7 for Node.js allows remote attackers to execute arbitrary SQL commands via the order parameter.",
+   "severity": null,
+   "score": 7.5
+  },
+  "CWE-89": {
+   "type": "CWE",
+   "label": "CWE-89"
+  },
+  "sequelize_project:sequelize": {
+   "type": "Product",
+   "label": "sequelize_project:sequelize"
+  },
+  "CVE-2015-1370": {
+   "type": "CVE",
+   "label": "CVE-2015-1370",
+   "desc": "Incomplete blacklist vulnerability in marked 0.3.2 and earlier for Node.js allows remote attackers to conduct cross-site scripting (XSS) attacks via a vbscript tag in a link.",
+   "severity": null,
+   "score": 4.3
+  },
+  "marked_project:marked": {
+   "type": "Product",
+   "label": "marked_project:marked"
+  },
+  "CVE-2014-9682": {
+   "type": "CVE",
+   "label": "CVE-2014-9682",
+   "desc": "The dns-sync module before 0.1.1 for node.js allows context-dependent attackers to execute arbitrary commands via shell metacharacters in the first argument to the resolve API function.",
+   "severity": null,
+   "score": 10.0
+  },
+  "CWE-77": {
+   "type": "CWE",
+   "label": "CWE-77"
+  },
+  "dns-sync_project:dns-sync": {
+   "type": "Product",
+   "label": "dns-sync_project:dns-sync"
+  },
+  "CVE-2015-5380": {
+   "type": "CVE",
+   "label": "CVE-2015-5380",
+   "desc": "The Utf8DecoderBase::WriteUtf16Slow function in unicode-decoder.cc in Google V8, as used in Node.js before 0.12.6, io.js before 1.8.3 and 2.x before 2.3.3, and other products, does not verify that there is memory available for a UTF-16 surrogate pair, which allows remote attackers to cause a denial of service (memory corruption) or possibly have unspecified other impact via a crafted byte sequence.",
+   "severity": null,
+   "score": 7.5
+  },
+  "iojs:io.js": {
+   "type": "Product",
+   "label": "iojs:io.js"
+  },
+  "CVE-2015-5688": {
+   "type": "CVE",
+   "label": "CVE-2015-5688",
+   "desc": "Directory traversal vulnerability in lib/app/index.js in Geddy before 13.0.8 for Node.js allows remote attackers to read arbitrary files via a ..%2f (dot dot encoded slash) in the PATH_INFO to the default URI.",
+   "severity": null,
+   "score": 5.0
+  },
+  "geddyjs:geddy": {
+   "type": "Product",
+   "label": "geddyjs:geddy"
+  },
+  "CVE-2015-8027": {
+   "type": "CVE",
+   "label": "CVE-2015-8027",
+   "desc": "Node.js 0.12.x before 0.12.9, 4.x before 4.2.3, and 5.x before 5.1.1 does not ensure the availability of a parser for each HTTP socket, which allows remote attackers to cause a denial of service (uncaughtException and service outage) via a pipelined HTTP request.",
+   "severity": "HIGH",
+   "score": 7.5
+  },
+  "CWE-17": {
+   "type": "CWE",
+   "label": "CWE-17"
+  },
+  "CVE-2016-2537": {
+   "type": "CVE",
+   "label": "CVE-2016-2537",
+   "desc": "The is-my-json-valid package before 2.12.4 for Node.js has an incorrect exports['utc-millisec'] regular expression, which allows remote attackers to cause a denial of service (blocked event loop) via a crafted string.",
+   "severity": "HIGH",
+   "score": 7.5
+  },
+  "is_my_json_valid_project:is_my_json_valid": {
+   "type": "Product",
+   "label": "is_my_json_valid_project:is_my_json_valid"
+  },
+  "CVE-2016-2086": {
+   "type": "CVE",
+   "label": "CVE-2016-2086",
+   "desc": "Node.js 0.10.x before 0.10.42, 0.12.x before 0.12.10, 4.x before 4.3.0, and 5.x before 5.6.0 allow remote attackers to conduct HTTP request smuggling attacks via a crafted Content-Length HTTP header.",
+   "severity": "HIGH",
+   "score": 7.5
+  },
+  "CVE-2016-2216": {
+   "type": "CVE",
+   "label": "CVE-2016-2216",
+   "desc": "The HTTP header parsing code in Node.js 0.10.x before 0.10.42, 0.11.6 through 0.11.16, 0.12.x before 0.12.10, 4.x before 4.3.0, and 5.x before 5.6.0 allows remote attackers to bypass an HTTP response-splitting protection mechanism via UTF-8 encoded Unicode characters in the HTTP header, as demonstrated by %c4%8d%c4%8a.",
+   "severity": "HIGH",
+   "score": 7.5
+  },
+  "CVE-2016-1202": {
+   "type": "CVE",
+   "label": "CVE-2016-1202",
+   "desc": "Untrusted search path vulnerability in Atom Electron before 0.33.5 allows local users to gain privileges via a Trojan horse Node.js module in a parent directory of a directory named on a require line.",
+   "severity": "HIGH",
+   "score": 7.8
+  },
+  "atom:electron": {
+   "type": "Product",
+   "label": "atom:electron"
+  },
+  "CVE-2016-3956": {
+   "type": "CVE",
+   "label": "CVE-2016-3956",
+   "desc": "The CLI in npm before 2.15.1 and 3.x before 3.8.3, as used in Node.js 0.10 before 0.10.44, 0.12 before 0.12.13, 4 before 4.4.2, and 5 before 5.10.0, includes bearer tokens with arbitrary requests, which allows remote HTTP servers to obtain sensitive information by reading Authorization headers.",
+   "severity": "HIGH",
+   "score": 7.5
+  },
+  "CWE-200": {
+   "type": "CWE",
+   "label": "CWE-200"
+  },
+  "ibm:sdk": {
+   "type": "Product",
+   "label": "ibm:sdk"
+  },
+  "npmjs:npm": {
+   "type": "Product",
+   "label": "npmjs:npm"
+  },
+  "CVE-2016-7191": {
+   "type": "CVE",
+   "label": "CVE-2016-7191",
+   "desc": "The Microsoft Azure Active Directory Passport (aka Passport-Azure-AD) library 1.x before 1.4.6 and 2.x before 2.0.1 for Node.js does not recognize the validateIssuer setting, which allows remote attackers to bypass authentication via a crafted token.",
+   "severity": "HIGH",
+   "score": 8.1
+  },
+  "microsoft:azure_active_directory_passport": {
+   "type": "Product",
+   "label": "microsoft:azure_active_directory_passport"
+  },
+  "CVE-2016-5325": {
+   "type": "CVE",
+   "label": "CVE-2016-5325",
+   "desc": "CRLF injection vulnerability in the ServerResponse#writeHead function in Node.js 0.10.x before 0.10.47, 0.12.x before 0.12.16, 4.x before 4.6.0, and 6.x before 6.7.0 allows remote attackers to inject arbitrary HTTP headers and conduct HTTP response splitting attacks via the reason argument.",
+   "severity": "MEDIUM",
+   "score": 6.1
+  },
+  "CWE-113": {
+   "type": "CWE",
+   "label": "CWE-113"
+  },
+  "suse:linux_enterprise": {
+   "type": "Product",
+   "label": "suse:linux_enterprise"
+  },
+  "CVE-2016-7099": {
+   "type": "CVE",
+   "label": "CVE-2016-7099",
+   "desc": "The tls.checkServerIdentity function in Node.js 0.10.x before 0.10.47, 0.12.x before 0.12.16, 4.x before 4.6.0, and 6.x before 6.7.0 does not properly handle wildcards in name fields of X.509 certificates, which allows man-in-the-middle attackers to spoof servers via a crafted certificate.",
+   "severity": "MEDIUM",
+   "score": 5.9
+  },
+  "CWE-19": {
+   "type": "CWE",
+   "label": "CWE-19"
+  },
+  "CVE-2013-7451": {
+   "type": "CVE",
+   "label": "CVE-2013-7451",
+   "desc": "The validator module before 1.1.0 for Node.js allows remote attackers to bypass the XSS filter via a nested tag.",
+   "severity": "MEDIUM",
+   "score": 6.1
+  },
+  "CVE-2013-7452": {
+   "type": "CVE",
+   "label": "CVE-2013-7452",
+   "desc": "The validator module before 1.1.0 for Node.js allows remote attackers to bypass the cross-site scripting (XSS) filter via a crafted javascript URI.",
+   "severity": "MEDIUM",
+   "score": 6.1
+  },
+  "CVE-2013-7453": {
+   "type": "CVE",
+   "label": "CVE-2013-7453",
+   "desc": "The validator module before 1.1.0 for Node.js allows remote attackers to bypass the cross-site scripting (XSS) filter via vectors related to UI redressing.",
+   "severity": "MEDIUM",
+   "score": 6.1
+  },
+  "svc:web-frontend": {
+   "type": "Service",
+   "label": "web-frontend"
+  },
+  "svc:api-gateway": {
+   "type": "Service",
+   "label": "api-gateway"
+  },
+  "svc:legacy-admin-panel": {
+   "type": "Service",
+   "label": "legacy-admin-panel"
+  },
+  "svc:webmail": {
+   "type": "Service",
+   "label": "webmail"
+  },
+  "svc:data-pipeline": {
+   "type": "Service",
+   "label": "data-pipeline"
+  }
+ },
+ "edges": [
+  [
+   "CVE-2017-16877",
+   "CWE-22",
+   "has_weakness"
+  ],
+  [
+   "CVE-2017-16877",
+   "zeit:next.js",
+   "affects"
+  ],
+  [
+   "CVE-2018-6184",
+   "CWE-22",
+   "has_weakness"
+  ],
+  [
+   "CVE-2018-6184",
+   "zeit:next.js",
+   "affects"
+  ],
+  [
+   "CVE-2018-18282",
+   "CWE-79",
+   "has_weakness"
+  ],
+  [
+   "CVE-2018-18282",
+   "zeit:next.js",
+   "affects"
+  ],
+  [
+   "CVE-2020-5284",
+   "CWE-23",
+   "has_weakness"
+  ],
+  [
+   "CVE-2020-5284",
+   "CWE-22",
+   "has_weakness"
+  ],
+  [
+   "CVE-2020-5284",
+   "zeit:next.js",
+   "affects"
+  ],
+  [
+   "CVE-2020-15242",
+   "CWE-601",
+   "has_weakness"
+  ],
+  [
+   "CVE-2020-15242",
+   "vercel:next.js",
+   "affects"
+  ],
+  [
+   "CVE-2021-21310",
+   "CWE-290",
+   "has_weakness"
+  ],
+  [
+   "CVE-2021-21310",
+   "nextauth.js:next-auth",
+   "affects"
+  ],
+  [
+   "CVE-2021-32702",
+   "CWE-79",
+   "has_weakness"
+  ],
+  [
+   "CVE-2021-32702",
+   "CWE-79",
+   "has_weakness"
+  ],
+  [
+   "CVE-2021-32702",
+   "auth0:nextjs-auth0",
+   "affects"
+  ],
+  [
+   "CVE-2021-37699",
+   "CWE-601",
+   "has_weakness"
+  ],
+  [
+   "CVE-2021-37699",
+   "CWE-601",
+   "has_weakness"
+  ],
+  [
+   "CVE-2021-37699",
+   "vercel:next.js",
+   "affects"
+  ],
+  [
+   "CVE-2021-39178",
+   "CWE-79",
+   "has_weakness"
+  ],
+  [
+   "CVE-2021-39178",
+   "CWE-79",
+   "has_weakness"
+  ],
+  [
+   "CVE-2021-39178",
+   "vercel:next.js",
+   "affects"
+  ],
+  [
+   "CVE-2021-43803",
+   "CWE-20",
+   "has_weakness"
+  ],
+  [
+   "CVE-2021-43803",
+   "vercel:next.js",
+   "affects"
+  ],
+  [
+   "CVE-2021-43803",
+   "nodejs:node.js",
+   "affects"
+  ],
+  [
+   "CVE-2021-43812",
+   "CWE-601",
+   "has_weakness"
+  ],
+  [
+   "CVE-2021-43812",
+   "auth0:nextjs-auth0",
+   "affects"
+  ],
+  [
+   "CVE-2022-21721",
+   "vercel:next.js",
+   "affects"
+  ],
+  [
+   "CVE-2022-23646",
+   "CWE-451",
+   "has_weakness"
+  ],
+  [
+   "CVE-2022-23646",
+   "vercel:next.js",
+   "affects"
+  ],
+  [
+   "CVE-2022-29214",
+   "CWE-601",
+   "has_weakness"
+  ],
+  [
+   "CVE-2022-29214",
+   "nextauth.js:next-auth",
+   "affects"
+  ],
+  [
+   "CVE-2022-31093",
+   "CWE-754",
+   "has_weakness"
+  ],
+  [
+   "CVE-2022-31093",
+   "nextauth.js:next-auth",
+   "affects"
+  ],
+  [
+   "CVE-2022-31127",
+   "CWE-79",
+   "has_weakness"
+  ],
+  [
+   "CVE-2022-31127",
+   "nextauth.js:next-auth",
+   "affects"
+  ],
+  [
+   "CVE-2022-31186",
+   "CWE-532",
+   "has_weakness"
+  ],
+  [
+   "CVE-2022-31186",
+   "next-auth:nextauth.js",
+   "affects"
+  ],
+  [
+   "CVE-2022-35924",
+   "CWE-20",
+   "has_weakness"
+  ],
+  [
+   "CVE-2022-35924",
+   "CWE-863",
+   "has_weakness"
+  ],
+  [
+   "CVE-2022-35924",
+   "nextauth.js:next-auth",
+   "affects"
+  ],
+  [
+   "CVE-2022-36046",
+   "CWE-248",
+   "has_weakness"
+  ],
+  [
+   "CVE-2022-36046",
+   "CWE-754",
+   "has_weakness"
+  ],
+  [
+   "CVE-2022-36046",
+   "vercel:next.js",
+   "affects"
+  ],
+  [
+   "CVE-2022-36046",
+   "nodejs:node.js",
+   "affects"
+  ],
+  [
+   "CVE-2022-39263",
+   "CWE-287",
+   "has_weakness"
+  ],
+  [
+   "CVE-2022-39263",
+   "nextauth.js:next-auth",
+   "affects"
+  ],
+  [
+   "CVE-2023-27490",
+   "CWE-352",
+   "has_weakness"
+  ],
+  [
+   "CVE-2023-27490",
+   "CWE-384",
+   "has_weakness"
+  ],
+  [
+   "CVE-2023-27490",
+   "nextauth.js:next-auth",
+   "affects"
+  ],
+  [
+   "CVE-2023-46298",
+   "vercel:next.js",
+   "affects"
+  ],
+  [
+   "CVE-2023-46729",
+   "CWE-918",
+   "has_weakness"
+  ],
+  [
+   "CVE-2023-46729",
+   "sentry:sentry_software_development_kit",
+   "affects"
+  ],
+  [
+   "CVE-2023-48309",
+   "CWE-285",
+   "has_weakness"
+  ],
+  [
+   "CVE-2023-48309",
+   "CWE-863",
+   "has_weakness"
+  ],
+  [
+   "CVE-2023-48309",
+   "nextauth.js:next-auth",
+   "affects"
+  ],
+  [
+   "CVE-2024-23841",
+   "CWE-80",
+   "has_weakness"
+  ],
+  [
+   "CVE-2024-23841",
+   "apollographql:apollo_client",
+   "affects"
+  ],
+  [
+   "CVE-2024-29901",
+   "CWE-294",
+   "has_weakness"
+  ],
+  [
+   "CVE-2024-29901",
+   "CWE-294",
+   "has_weakness"
+  ],
+  [
+   "CVE-2024-29901",
+   "workos:authkit-nextjs",
+   "affects"
+  ],
+  [
+   "CVE-2024-34350",
+   "CWE-444",
+   "has_weakness"
+  ],
+  [
+   "CVE-2024-34350",
+   "vercel:next.js",
+   "affects"
+  ],
+  [
+   "CVE-2024-34351",
+   "CWE-918",
+   "has_weakness"
+  ],
+  [
+   "CVE-2024-34351",
+   "vercel:next.js",
+   "affects"
+  ],
+  [
+   "CVE-2024-37162",
+   "CWE-209",
+   "has_weakness"
+  ],
+  [
+   "CVE-2024-37162",
+   "CWE-209",
+   "has_weakness"
+  ],
+  [
+   "CVE-2024-37162",
+   "idopesok:zsa",
+   "affects"
+  ],
+  [
+   "CVE-2024-39693",
+   "CWE-400",
+   "has_weakness"
+  ],
+  [
+   "CVE-2024-39693",
+   "vercel:next.js",
+   "affects"
+  ],
+  [
+   "CVE-1999-0058",
+   "php:php",
+   "affects"
+  ],
+  [
+   "CVE-1999-0238",
+   "php:php",
+   "affects"
+  ],
+  [
+   "CVE-1999-0346",
+   "php:php_fi",
+   "affects"
+  ],
+  [
+   "CVE-1999-0068",
+   "php:php",
+   "affects"
+  ],
+  [
+   "CVE-2000-0059",
+   "php:php",
+   "affects"
+  ],
+  [
+   "CVE-2000-0745",
+   "francisco_burzi:php-nuke",
+   "affects"
+  ],
+  [
+   "CVE-2000-0860",
+   "php:php",
+   "affects"
+  ],
+  [
+   "CVE-2000-0919",
+   "phpix:phpix",
+   "affects"
+  ],
+  [
+   "CVE-2000-0967",
+   "php:php",
+   "affects"
+  ],
+  [
+   "CVE-2000-1230",
+   "phorum:phorum",
+   "affects"
+  ],
+  [
+   "CVE-2000-1166",
+   "twig_development_team:twig",
+   "affects"
+  ],
+  [
+   "CVE-2001-1385",
+   "php:php",
+   "affects"
+  ],
+  [
+   "CVE-2001-1385",
+   "mandrakesoft:mandrake_linux",
+   "affects"
+  ],
+  [
+   "CVE-2001-1357",
+   "phpheaven:phpmychat",
+   "affects"
+  ],
+  [
+   "CVE-2001-1358",
+   "phpheaven:phpmychat",
+   "affects"
+  ],
+  [
+   "CVE-2001-1468",
+   "secure_reality:phpsecurepages",
+   "affects"
+  ],
+  [
+   "CVE-2001-0042",
+   "apache:http_server",
+   "affects"
+  ],
+  [
+   "CVE-2001-0043",
+   "phpgroupware:phpgroupware",
+   "affects"
+  ],
+  [
+   "CVE-2001-0088",
+   "jason_hines:phpweblog",
+   "affects"
+  ],
+  [
+   "CVE-2001-0108",
+   "php:php",
+   "affects"
+  ],
+  [
+   "CVE-2001-0108",
+   "mandrakesoft:mandrake_linux",
+   "affects"
+  ],
+  [
+   "CVE-2001-0292",
+   "francisco_burzi:php-nuke",
+   "affects"
+  ],
+  [
+   "CVE-2001-0320",
+   "francisco_burzi:php-nuke",
+   "affects"
+  ],
+  [
+   "CVE-2001-0321",
+   "francisco_burzi:php-nuke",
+   "affects"
+  ],
+  [
+   "CVE-2001-0001",
+   "francisco_burzi:php-nuke",
+   "affects"
+  ],
+  [
+   "CVE-2001-0383",
+   "francisco_burzi:php-nuke",
+   "affects"
+  ],
+  [
+   "CVE-2001-0475",
+   "jelsoft:vbulletin",
+   "affects"
+  ],
+  [
+   "CVE-2001-0478",
+   "phpmyadmin:phpmyadmin",
+   "affects"
+  ],
+  [
+   "CVE-2001-0479",
+   "phppgadmin:phppgadmin",
+   "affects"
+  ],
+  [
+   "CVE-2001-1246",
+   "CWE-88",
+   "has_weakness"
+  ],
+  [
+   "CVE-2001-1246",
+   "php:php",
+   "affects"
+  ],
+  [
+   "CVE-2001-1159",
+   "squirrelmail:squirrelmail",
+   "affects"
+  ],
+  [
+   "CVE-2001-1363",
+   "phpwebsite_development_team:phpwebsite",
+   "affects"
+  ],
+  [
+   "CVE-2011-5037",
+   "CWE-20",
+   "has_weakness"
+  ],
+  [
+   "CVE-2011-5037",
+   "google:v8",
+   "affects"
+  ],
+  [
+   "CVE-2012-2330",
+   "CWE-20",
+   "has_weakness"
+  ],
+  [
+   "CVE-2012-2330",
+   "nodejs:nodejs",
+   "affects"
+  ],
+  [
+   "CVE-2013-4660",
+   "CWE-20",
+   "has_weakness"
+  ],
+  [
+   "CVE-2013-4660",
+   "nodeca:js-yaml",
+   "affects"
+  ],
+  [
+   "CVE-2013-4450",
+   "CWE-20",
+   "has_weakness"
+  ],
+  [
+   "CVE-2013-4450",
+   "nodejs:nodejs",
+   "affects"
+  ],
+  [
+   "CVE-2013-7379",
+   "CWE-287",
+   "has_weakness"
+  ],
+  [
+   "CVE-2013-7379",
+   "ucdok:tomato",
+   "affects"
+  ],
+  [
+   "CVE-2014-3742",
+   "CWE-399",
+   "has_weakness"
+  ],
+  [
+   "CVE-2014-3742",
+   "spumko_project:hapi_server_framework",
+   "affects"
+  ],
+  [
+   "CVE-2014-5256",
+   "CWE-119",
+   "has_weakness"
+  ],
+  [
+   "CVE-2014-5256",
+   "nodejs:nodejs",
+   "affects"
+  ],
+  [
+   "CVE-2014-6394",
+   "CWE-22",
+   "has_weakness"
+  ],
+  [
+   "CVE-2014-6394",
+   "fedoraproject:fedora",
+   "affects"
+  ],
+  [
+   "CVE-2014-6394",
+   "apple:xcode",
+   "affects"
+  ],
+  [
+   "CVE-2014-6394",
+   "joyent:node.js",
+   "affects"
+  ],
+  [
+   "CVE-2014-7205",
+   "CWE-94",
+   "has_weakness"
+  ],
+  [
+   "CVE-2014-7205",
+   "bassmaster_project:bassmaster",
+   "affects"
+  ],
+  [
+   "CVE-2014-7191",
+   "CWE-399",
+   "has_weakness"
+  ],
+  [
+   "CVE-2014-7191",
+   "nodejs:node.js",
+   "affects"
+  ],
+  [
+   "CVE-2014-7192",
+   "CWE-94",
+   "has_weakness"
+  ],
+  [
+   "CVE-2014-7192",
+   "joyent:node.js",
+   "affects"
+  ],
+  [
+   "CVE-2014-7193",
+   "CWE-284",
+   "has_weakness"
+  ],
+  [
+   "CVE-2014-7193",
+   "sideway:hapi_crumb",
+   "affects"
+  ],
+  [
+   "CVE-2015-1164",
+   "serve-static_project:serve-static",
+   "affects"
+  ],
+  [
+   "CVE-2015-1369",
+   "CWE-89",
+   "has_weakness"
+  ],
+  [
+   "CVE-2015-1369",
+   "sequelize_project:sequelize",
+   "affects"
+  ],
+  [
+   "CVE-2015-1370",
+   "marked_project:marked",
+   "affects"
+  ],
+  [
+   "CVE-2014-9682",
+   "CWE-77",
+   "has_weakness"
+  ],
+  [
+   "CVE-2014-9682",
+   "dns-sync_project:dns-sync",
+   "affects"
+  ],
+  [
+   "CVE-2015-5380",
+   "CWE-119",
+   "has_weakness"
+  ],
+  [
+   "CVE-2015-5380",
+   "google:v8",
+   "affects"
+  ],
+  [
+   "CVE-2015-5380",
+   "iojs:io.js",
+   "affects"
+  ],
+  [
+   "CVE-2015-5380",
+   "nodejs:node.js",
+   "affects"
+  ],
+  [
+   "CVE-2015-5688",
+   "CWE-22",
+   "has_weakness"
+  ],
+  [
+   "CVE-2015-5688",
+   "geddyjs:geddy",
+   "affects"
+  ],
+  [
+   "CVE-2015-8027",
+   "CWE-17",
+   "has_weakness"
+  ],
+  [
+   "CVE-2015-8027",
+   "nodejs:node.js",
+   "affects"
+  ],
+  [
+   "CVE-2016-2537",
+   "CWE-20",
+   "has_weakness"
+  ],
+  [
+   "CVE-2016-2537",
+   "is_my_json_valid_project:is_my_json_valid",
+   "affects"
+  ],
+  [
+   "CVE-2016-2086",
+   "CWE-20",
+   "has_weakness"
+  ],
+  [
+   "CVE-2016-2086",
+   "nodejs:node.js",
+   "affects"
+  ],
+  [
+   "CVE-2016-2086",
+   "fedoraproject:fedora",
+   "affects"
+  ],
+  [
+   "CVE-2016-2216",
+   "CWE-20",
+   "has_weakness"
+  ],
+  [
+   "CVE-2016-2216",
+   "nodejs:node.js",
+   "affects"
+  ],
+  [
+   "CVE-2016-2216",
+   "fedoraproject:fedora",
+   "affects"
+  ],
+  [
+   "CVE-2016-1202",
+   "atom:electron",
+   "affects"
+  ],
+  [
+   "CVE-2016-3956",
+   "CWE-200",
+   "has_weakness"
+  ],
+  [
+   "CVE-2016-3956",
+   "ibm:sdk",
+   "affects"
+  ],
+  [
+   "CVE-2016-3956",
+   "nodejs:node.js",
+   "affects"
+  ],
+  [
+   "CVE-2016-3956",
+   "npmjs:npm",
+   "affects"
+  ],
+  [
+   "CVE-2016-7191",
+   "CWE-287",
+   "has_weakness"
+  ],
+  [
+   "CVE-2016-7191",
+   "microsoft:azure_active_directory_passport",
+   "affects"
+  ],
+  [
+   "CVE-2016-5325",
+   "CWE-113",
+   "has_weakness"
+  ],
+  [
+   "CVE-2016-5325",
+   "nodejs:node.js",
+   "affects"
+  ],
+  [
+   "CVE-2016-5325",
+   "suse:linux_enterprise",
+   "affects"
+  ],
+  [
+   "CVE-2016-7099",
+   "CWE-19",
+   "has_weakness"
+  ],
+  [
+   "CVE-2016-7099",
+   "nodejs:node.js",
+   "affects"
+  ],
+  [
+   "CVE-2016-7099",
+   "suse:linux_enterprise",
+   "affects"
+  ],
+  [
+   "CVE-2013-7451",
+   "CWE-79",
+   "has_weakness"
+  ],
+  [
+   "CVE-2013-7451",
+   "nodejs:node.js",
+   "affects"
+  ],
+  [
+   "CVE-2013-7452",
+   "CWE-79",
+   "has_weakness"
+  ],
+  [
+   "CVE-2013-7452",
+   "nodejs:node.js",
+   "affects"
+  ],
+  [
+   "CVE-2013-7453",
+   "CWE-79",
+   "has_weakness"
+  ],
+  [
+   "CVE-2013-7453",
+   "nodejs:node.js",
+   "affects"
+  ],
+  [
+   "svc:web-frontend",
+   "vercel:next.js",
+   "depends_on"
+  ],
+  [
+   "svc:web-frontend",
+   "zeit:next.js",
+   "depends_on"
+  ],
+  [
+   "svc:web-frontend",
+   "next-auth:nextauth.js",
+   "depends_on"
+  ],
+  [
+   "svc:web-frontend",
+   "nextauth.js:next-auth",
+   "depends_on"
+  ],
+  [
+   "svc:web-frontend",
+   "auth0:nextjs-auth0",
+   "depends_on"
+  ],
+  [
+   "svc:web-frontend",
+   "apollographql:apollo_client",
+   "depends_on"
+  ],
+  [
+   "svc:web-frontend",
+   "idopesok:zsa",
+   "depends_on"
+  ],
+  [
+   "svc:api-gateway",
+   "nodejs:node.js",
+   "depends_on"
+  ],
+  [
+   "svc:api-gateway",
+   "joyent:node.js",
+   "depends_on"
+  ],
+  [
+   "svc:api-gateway",
+   "npmjs:npm",
+   "depends_on"
+  ],
+  [
+   "svc:legacy-admin-panel",
+   "php:php",
+   "depends_on"
+  ],
+  [
+   "svc:legacy-admin-panel",
+   "phpmyadmin:phpmyadmin",
+   "depends_on"
+  ],
+  [
+   "svc:webmail",
+   "squirrelmail:squirrelmail",
+   "depends_on"
+  ],
+  [
+   "svc:webmail",
+   "php:php",
+   "depends_on"
+  ],
+  [
+   "svc:data-pipeline",
+   "sequelize_project:sequelize",
+   "depends_on"
+  ],
+  [
+   "svc:data-pipeline",
+   "nodejs:node.js",
+   "depends_on"
+  ]
+ ]
+}
