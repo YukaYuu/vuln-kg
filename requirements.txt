@@ -1,0 +1,7 @@
+matplotlib>=3.11
+networkx>=3.7
+numpy>=2.5
+
+# Only needed for scripts/make_fig_appendix_alpha.py, which applies a separate
+# project's (bipartite-layout) graph layout algorithm to this project's data.
+# That project is not published on PyPI; see its own repository for setup.

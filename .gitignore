@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+
+# Internal-facing report drafts (for the GxP assignment / Quollio), not part of the
+# public portfolio repo.
+report_gxp.*
+report_andrew.*
